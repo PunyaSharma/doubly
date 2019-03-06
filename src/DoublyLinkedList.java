@@ -23,12 +23,15 @@ void insert(Node node){
 }
 
     public static void main(String[] args) {
-        DoublyLinkedList linkedList = new DoublyLinkedList();
-        Node node = new Node();
-        node.data =4;
-        node.next = null;
-        node.prev = null;
-        linkedList.insert(node);
+        DoublyLinkedList obj = new DoublyLinkedList();
+        for( int i=0;i<5;i++){
+            Node node= new Node();
+            node.data= (i+1)*1000;
+            obj.insert(node);
+        }
+        obj.display();
+        obj.delete();
+        obj.display();
     }
 
     void display(){
@@ -51,9 +54,9 @@ void insert(Node node){
            }System.out.println("deleting node" + temp.data+ "from last");
            temp=temp.prev;
            temp.next=null;
-
-
         }
+
     }
+
 
  }
